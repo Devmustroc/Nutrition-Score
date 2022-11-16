@@ -3,15 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	ns := GetnutritionalScore(nutritionalData{
-		Energy:              EnergyFromkcal(),
+	ns = GetnutritionalScore(nutritionalData{
+		Energy:              EnergyKJ(),
 		Sugars:              SugarGram(),
-		SaturatedFattyAcids: SaturatedFattyAcids(),
-		Sodium:              SodiumMIlligram(),
+		SaturatedfattyAcids: SaturatedFattyAcids(),
+		Sodium:              SodiumMilligram(),
 		Fruits:              FruitsPercent(),
 		Fibre:               FibreGram(),
-		Protein:             Protein(),
+		Protein:             ProteinGram(),
 	}, food)
-
 	fmt.Printf("Nutritional Score:%d", ns.Value)
 }
